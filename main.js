@@ -1,7 +1,7 @@
 
 
 let slideIndex = 1;
-showSlides(slideIndex);  
+showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
@@ -27,5 +27,12 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+
+// hamburger menu 
+function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
 }
  

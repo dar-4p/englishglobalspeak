@@ -36,7 +36,7 @@ body{
 
 .main {
   display:flex;
-  flex-direction:column;
+  flex-direction: column;
 }
 
 .top {
@@ -44,16 +44,31 @@ body{
   
   width:100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  height: 200px;
 }
 .logo {
+  align-self: flex-start;
   margin-top: 10px;
 }
 
 .site-title{
   color:#fff;
   text-shadow: 5px 3px 0px #000;
+  font-size: 2.5rem;
+}
+
+.top h3{
+  padding-left: 80px;
+  color: blue;
+}
+
+.contact h5 {
+  background-color: #0e0e0e;
+  color: #fff;
+  padding: 5px 0;
 }
 .top-icons{
   display: flex;
@@ -121,7 +136,8 @@ body{
   border-top: none;
   font-size: 2.1rem;
   color: purple;
-  text-shadow: 1px 2px 1px #000;
+  
+  /* text-shadow: 1px 2px 1px #fff; */
 }
 
 .about h2{
@@ -130,12 +146,11 @@ body{
   padding-bottom: 1rem;
   border-top: 1px solid #000;
 }
+
 .about p{
   padding-bottom: 1.6rem;
   text-align: left;
   line-height: 1.6;
-  
-
 }
 
 .original-texts{
@@ -147,8 +162,7 @@ body{
   padding-top: 10px;
   color: orangered;
   font-size: 2rem;
-  font-weight: 500;
-  
+  font-weight: 500; 
 }
 
 .lesson-titles{
@@ -399,11 +413,11 @@ form {
 @media screen and (min-width: 280px) {
   
 
-  .menu {
-    display:block;
-    font-family: 'Noto Sans JP', sans-serif; 
+   .menu {
+    display:none;
+    /* font-family: 'Noto Sans JP', sans-serif;  */
   }
-  
+  /*
   .menu li {
     margin: 2px auto 2px auto;
     display: flex;
@@ -423,7 +437,122 @@ form {
   }
   .menu a:hover{
     border-bottom: 1px solid blue;
+  } */
+
+  /* hamburger menu  */
+
+  .nav {
+    font-family: 'Roboto', sans-serif;
+    /* background-color: #1e90f3; */
+    background: linear-gradient(to left,#1e90f3,blue)  ;
+    cursor: pointer;
   }
+
+
+  
+  #menu {
+    z-index: 2;
+    background-color: rgb(11, 50, 205);
+    
+  }
+  
+  #menu-bar {
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content:center;
+    width: 45px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    /* margin: 4px; */
+    height: 5px;
+    width: 100%;
+    background-color: #f7f1f2;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  #bar1 {
+    transform: translateY(-4px);
+  }
+  
+  #bar3 {
+    transform: translateY(4px);
+  }
+  
+  .nav {
+    transition: 0.3s ease;
+    display: none;
+  }
+  
+  .nav ul {
+    padding: 0 22px;
+  }
+  
+  .nav li {
+    list-style: none;
+    padding: 12px 0;
+    text-align: center;
+  }
+  
+  .nav li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .nav li a:hover {
+    font-weight: bold;
+  }
+  
+  .menu-bg, #menu {
+    top: 0;
+    left: 0;
+    /* right:200px; */
+    position: sticky;
+  }
+  
+  .menu-bg {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, #DC052D, #DC052D);
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+  
+  .change {
+    display: block;
+  }
+  
+  .change .bar {
+    background-color: white;
+  }
+  
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  
+  .change #bar2 {
+    opacity: 0;
+  }
+  
+  .change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+  
+  .change-bg {
+    width: 520px;
+    height: 460px;
+    transform: translate(-60%,-30%);
+  }
+
+
 
   .fa-instagram{
     font-size: 1.5rem;
@@ -441,8 +570,46 @@ form {
 
 /* iPads/tablets 481-768 changed to 902 from 768 because of pics*/
 @media screen and (min-width: 902px) {
+
+  #menu{
+    display: none;
+  }
   
+  .top {
+    background-image: linear-gradient(blue,white);
+    
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 350px;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin-top: 10px;
+    width: 150px;
+  }
   
+  .site-title{
+    color:#fff;
+    text-shadow: 5px 3px 0px #000;
+    font-size: 4rem;
+  }
+  
+  .top h3{
+    font-size: 2.4rem;
+    padding-left: 80px;
+    color: blue;
+  }
+  
+  .contact h5 {
+    background-color: #0e0e0e;
+    color: #fff;
+    padding: 5px 0;
+    font-size: 1.3rem;
+  }
   
   .menu {
     display: flex;

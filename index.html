@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website 2</title>
+  <title>Website 1.4</title>  
   <!-- google fonts  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,14 +19,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <!-- body  -->
-<body>
-  
-    <div class="top">
+<body>  
+  <!-- mobile menu  -->
+  <div id="menu">
+    <div id="menu-bar" onclick="menuOnClick()">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+    </div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#lessons">LESSONS</a></li>
+        <li><a href="#blogs">BLOGS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#games">GAMES</a></li>
+      </ul>
+    </nav> 
+  </div>
+
+
+
+  <div class="top">
       <div class="logo">
         <img src="./img/egs-logo150px-150px.jpg" width="100px" alt="site logo">
       </div>
       
       <h1 class="site-title">English Global Speak</h1> 
+      <h3>Connect with the world!</h3>
     </div>
     <!-- social icons  -->
     <div class="contact">
@@ -45,7 +65,14 @@
       <li><a href="#lessons">LESSONS</a></li>
       <li><a href="#blogs">BLOGS</a></li>
       <li><a href="#contact">CONTACT</a></li>
+      <li><a href="#games">GAMES</a></li>
     </div>
+
+    
+    
+
+
+
   <div class="container">
     <div class="about">
       <h2 class="welcome" id="about">Welcome to English Global Speak(Home Page)</h2>
@@ -198,7 +225,7 @@
  
     </div>   <!-- blogs page end  -->
 
-    <h2 id="contact-form">contact page</h2>
+    <h2 id="contact">contact page</h2>
     <div class="msg-me">
       <form action="action_page.php">
 
@@ -219,6 +246,20 @@
       </form>
 
     </div>  <!-- contact page end  -->
+
+    <div class="games" id="games">
+      <h2 class="games_title">Games and Activities</h2>
+      <div class="spelling-game1">
+        
+      </div>
+      <div class="match-game1">
+
+      </div>
+      <div class="game1">
+
+      </div>
+    </div>   <!-- games end -->
+
     <button class="top-btn" ><a href="#about">Back to Top</a></button>
     </div>
   </div> <!-- container -->
@@ -229,6 +270,7 @@
         <li><a href="#lessons">Lessons</a></li>
         <li><a href="#blogs">Blogs</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#games">Games</a></li>
       </div>
       <div class="footer_copyrightsandSM">
 
@@ -238,6 +280,7 @@
           <a href="www.youtube.com"> <i class= "fa-brands fa-youtube fa-2x"></i></a>
           <a href="www.facebook.com"> <i class= "fa-brands fa-facebook fa-2x"></i></a>
         </div>
+        
         <div class="contact">
            <p>tel: 080-9696-7773   </p> 
            <p>info@englishglobalspeak.com</p>
