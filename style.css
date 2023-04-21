@@ -41,6 +41,7 @@ body{
 
 .top {
   background-image: linear-gradient(blue,white);
+  background-image: url('./img/egs-banner-904-350.jpg');
   
   width:100%;
   display: flex;
@@ -93,7 +94,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 0px 0px 10px 0px;
+  margin: 40px 0;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -441,6 +442,11 @@ form {
 
   /* hamburger menu  */
 
+  .top {
+    /* background-image: linear-gradient(blue,white); */
+    background-image:linear-gradient(rgba(0, 157, 255, 0.7),rgba(189, 228, 240, 0.4));
+  }
+
   .nav {
     font-family: 'Roboto', sans-serif;
     /* background-color: #1e90f3; */
@@ -576,14 +582,19 @@ form {
   }
   
   .top {
-    background-image: linear-gradient(blue,white);
-    
-    width:100%;
+    /* background-image: linear-gradient(blue,white); */
+    background-image:linear-gradient(rgba(0, 157, 255, 0.7),rgba(189, 228, 240, 0.4));
+    /* background-image:linear-gradient(rgba(21, 255, 0, 0.3),rgba(128, 21, 0, 0.9)), url('./img/aboutme-700px.jpg'); */
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* width:100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 350px;
+    height: 300px;
+    /* clip-path: polygon(0 0, 100% 0,100% 320px, 0 100%); */
   }
 
   .logo {
@@ -596,12 +607,51 @@ form {
     color:#fff;
     text-shadow: 5px 3px 0px #000;
     font-size: 4rem;
+    animation: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes moveInLeft{
+    0% {
+      opacity: 0;
+      transform: translate(-100px);
+    }
+    80% {
+      transform: translate(10px);
+      
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+
+    }
+
+  }
+  @keyframes moveInRight{
+    0% {
+      opacity: 0;
+      transform: translate(100px);
+    }
+    80% {
+      transform: translate(-10px);
+      
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+
+    }
+
   }
   
   .top h3{
     font-size: 2.4rem;
     padding-left: 80px;
     color: blue;
+    animation: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
   }
   
   .contact h5 {
